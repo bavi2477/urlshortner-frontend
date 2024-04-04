@@ -15,7 +15,7 @@ const UserRegister = () => {
         console.log("register payloads", username, email, password);
         const payloads = { username, email, password };
         try {
-            const res = await axios.post('http://localhost:4000/api/user/register', payloads);
+            const res = await axios.post('https://urlshortener-backend-ov96.onrender.com/api/user/register', payloads);
             if (res.data.message) {
                 toast.success(res.data.message, {
                     onClose: () => navigate('/login')

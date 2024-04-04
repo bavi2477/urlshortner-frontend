@@ -27,7 +27,7 @@ const Chart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/api/url/stats');
+        const response = await axios.get('https://urlshortener-backend-ov96.onrender.com/api/url/stats');
         const data = response.data;
 
         // Transform the data as needed for the chart

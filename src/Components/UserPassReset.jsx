@@ -14,7 +14,7 @@ const UserPassReset = () => {
         e.preventDefault();
         
         try {
-            const response = await axios.post(`http://localhost:4000/api/user/reset-password/${token}`, { password: newPassword });
+            const response = await axios.post(`https://urlshortener-backend-ov96.onrender.com/api/user/reset-password/${token}`, { password: newPassword });
             if (response.data.message) {
                 toast.success(response.data.message, {
                     onClose: () => navigate('/login')

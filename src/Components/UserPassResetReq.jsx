@@ -13,7 +13,7 @@ const UserPassResetReq = () => {
         e.preventDefault();
         console.log("password reset request email:", email);
         try {
-            const response = await axios.post('http://localhost:4000/api/user/forgot-password', { email });
+            const response = await axios.post('https://urlshortener-backend-ov96.onrender.com/api/user/forgot-password', { email });
             toast.success(response.data.message);
             setEmail('');
         } catch (error) {

@@ -15,7 +15,7 @@ const UserLogin = () => {
         console.log("login payloads", email, password);
         const payloads = { email, password };
         try {
-            const res = await axios.post('http://localhost:4000/api/user/login', payloads);
+            const res = await axios.post('https://urlshortener-backend-ov96.onrender.com/api/user/login', payloads);
             setResponseMsg(res.data.message);
             setEmail('')
             setPassword('')

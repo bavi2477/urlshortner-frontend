@@ -9,7 +9,7 @@ const UrlForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault(); 
         try {
-            const response = await axios.post('http://localhost:4000/api/url/shorten', { originalUrl });
+            const response = await axios.post('https://urlshortener-backend-ov96.onrender.com/api/url/shorten', { originalUrl });
             setShortUrl(response.data.shortUrl);
             setError(''); 
         } catch (error) {
